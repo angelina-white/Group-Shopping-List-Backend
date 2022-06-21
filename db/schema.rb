@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_21_191339) do
+ActiveRecord::Schema.define(version: 2022_06_21_194151) do
 
   create_table "names", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.date "shop_date"
+    t.integer "sku_id"
+    t.float "quantity"
+    t.integer "name_id"
+  end
+
+  create_table "skus", force: :cascade do |t|
+    t.integer "sku_number"
+    t.string "label"
+    t.string "description"
+    t.integer "unit_count"
+    t.float "price"
   end
 
 end
