@@ -1,0 +1,17 @@
+puts "Seeding sku data..."
+
+Sku.create(
+    sku_number: 48757,
+    label: "Spring Mix",
+    description: "A flavorful blend of organic baby lettuces, baby greens, and radicchio.",
+    unit_count: 1_000_000,
+    price: 4.49
+)
+
+Sku.create(
+    sku_number: 218073,
+    label: "Organic Milk, 1%",
+    description: "",
+    unit_count: 3,
+    price: 10.89
+)
