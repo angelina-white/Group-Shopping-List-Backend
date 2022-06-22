@@ -8,7 +8,7 @@ puts "Seeding sku data..."
 
 spring_mix = Sku.create(
     sku_number: 48757,
-    label: "Spring Mix",
+    label: "Spring Mix Salad",
     description: "A flavorful blend of organic baby lettuces, baby greens, and radicchio.",
     unit_count: 1_000_000,
     price: 4.49

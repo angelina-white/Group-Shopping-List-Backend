@@ -1,3 +1,28 @@
 development:
   adapter: sqlite3
   database: db/development.sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+#   default: &default
+#   adapter: sqlite3
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # timeout: 5000
+
+# development:
+#   <<: *default
+#   database: db/development.sqlite3
+
+test:
+  # <<: *default
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+production:
+  # <<: *default
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000

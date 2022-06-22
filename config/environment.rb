@@ -1,7 +1,9 @@
-require 'bundler/setup'
-Bundler.require(:default, :development)
+ENV["RACK_ENV"] ||= "development"
 
-require_all "app/models"
+require 'bundler/setup'
+Bundler.require(:default, ENV["RACK_ENV"])
+
+require_all "app"
 
 def reload
     load "app/models/name.rb"
