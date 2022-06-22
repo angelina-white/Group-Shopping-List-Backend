@@ -42,5 +42,11 @@ class ApplicationController < Sinatra::Base
       added_name = Name.create(name: params[:name])
       added_name.to_json
     end
+
+    # delete '/names/:id' do 
+    #   deleted_name = Name.find(params[:id])
+    #   deleted_name.destroy
+    #   # deleted_name.to_json
+    # end
   
   end

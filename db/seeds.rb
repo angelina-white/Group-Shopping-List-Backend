@@ -60,3 +60,9 @@ Order.create(
     quantity: 0.5,
     name_id: billy.id
 )
+
+Order.create(
+    sku_id: spring_mix.id,
+    shop_date: Date.new(2022, 7, 25),
+    quantity: 1.5,
+)
