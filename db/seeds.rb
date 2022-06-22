@@ -1,7 +1,7 @@
 puts "Removing prior data..."
-#Name.delete_all
-#Sku.delete_all
-#Order.delete_all
+Name.delete_all
+Sku.delete_all
+Order.delete_all
 
 
 puts "Seeding sku data..."
@@ -10,7 +10,7 @@ spring_mix = Sku.create(
     sku_number: 48757,
     label: "Spring Mix",
     description: "A flavorful blend of organic baby lettuces, baby greens, and radicchio.",
-    unit_count: 1000000,
+    unit_count: 1_000_000,
     price: 4.49
 )
 
@@ -22,31 +22,41 @@ organic_milk = Sku.create(
     price: 10.89
 )
 
-
-# puts "Seeding names data..."
-
-# billy = Name.create(
-#     name: "Billy"
-# )
-
-# tom = Name.create(
-#     name: "Tom"
-# )
-
-# sarah = Name.create(
-#     name: "Sarah"
-# )
-
-# sally = Name.create(
-#     name: "Sally"
-# )
+spin_parm_dp = Sku.create(
+    sku_number: 407600,
+    label: "Spinach Parm Dip",
+    description: "",
+    unit_count: 1_000_000,
+    price: 8.99
+)
 
 
-# puts "Seeding orders data..."
-# puts "shop_date: DateTime.parse('06/25/2022'),"
+puts "Seeding names data..."
 
-# Order.create(
-#     sku_id: spring_mix.id,
-#     quantity: 0.5,
-#     name_id: billy.id
-# )
+billy = Name.create(
+    name: "Billy"
+)
+
+tom = Name.create(
+    name: "Tom"
+)
+
+sarah = Name.create(
+    name: "Sarah"
+)
+
+sally = Name.create(
+    name: "Sally"
+)
+
+
+puts "Seeding orders data..."
+#puts "shop_date: DateTime.parse('06/25/2022'),"
+# using Date.new per https://stackoverflow.com/a/32642800
+
+Order.create(
+    sku_id: spring_mix.id,
+    shop_date: Date.new(2022, 6, 25),
+    quantity: 0.5,
+    name_id: billy.id
+)
