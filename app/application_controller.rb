@@ -43,10 +43,36 @@ class ApplicationController < Sinatra::Base
       added_name.to_json
     end
 
-    # delete '/names/:id' do 
-    #   deleted_name = Name.find(params[:id])
-    #   deleted_name.destroy
-    #   # deleted_name.to_json
-    # end
+    delete '/names/:id' do 
+      deleted_name = Name.find(params[:id])
+      deleted_name.destroy
+      deleted_name.to_json
+    end
+
+    delete '/skus/:id' do
+      deleted_sku = Sku.find(params[:id])
+      deleted_sku.destroy
+      deleted_sku.to_json
+    end
+
+    patch '/orders/:id' do
+      patched_order = Order.find(params[:id])
+      patched_order.update(
+        quantity: params[:quantity],
+      )
+      patched_order.to_json
+    end
+
+    patch '/skus/:id' do
+      patched_sku = Sku.find(params[:id])
+      patched_sku.update(
+        sku_number: params[:sku_number],
+        label: params[:label],
+        description: params[:description],
+        unit_count: params[:unit_count],
+        price: params[:price]
+      )
+      patched_sku.to_json
+    end
   
   end
