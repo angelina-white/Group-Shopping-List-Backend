@@ -67,7 +67,7 @@ Order.create(
 Order.create(
     sku_id: spring_mix.id,
     quantity: 1.5,
-    name_id: "",
+    name_id: tom.id,
     year: 2022,
     month: 7,
     day: 25,
@@ -77,7 +77,7 @@ Order.create(
 Order.create(
     sku_id: spring_mix.id,
     quantity: 2.5,
-    name_id: "",
+    name_id: sarah.id,
     year: 2022,
     month: 8,
     day: 25,

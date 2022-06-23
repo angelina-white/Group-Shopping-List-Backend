@@ -32,7 +32,8 @@ class ApplicationController < Sinatra::Base
         name_id: params[:name_id],
         year: params[:year],
         month: params[:month],
-        day: params[:day]
+        day: params[:day],
+        order_price: params[:order_price]
       )
       added_order.to_json
     end
@@ -53,6 +54,12 @@ class ApplicationController < Sinatra::Base
       deleted_name.to_json
     end
 
+    delete '/orders/:id' do
+      order = Order.find(params[:id])
+      order.destroy
+      order.to_json
+    end
+
     delete '/skus/:id' do
       deleted_sku = Sku.find(params[:id])
       deleted_sku.destroy
@@ -63,6 +70,7 @@ class ApplicationController < Sinatra::Base
       patched_order = Order.find(params[:id])
       patched_order.update(
         quantity: params[:quantity],
+        order_price: params[:order_price]
       )
       patched_order.to_json
     end
