@@ -60,7 +60,8 @@ Order.create(
     name_id: billy.id,
     year: 2022,
     month: 6,
-    day: 25
+    day: 25,
+    order_price: 9.99
 )
 
 Order.create(
@@ -69,7 +70,8 @@ Order.create(
     name_id: "",
     year: 2022,
     month: 7,
-    day: 25
+    day: 25,
+    order_price: 2.99
 )
 
 Order.create(
@@ -78,5 +80,6 @@ Order.create(
     name_id: "",
     year: 2022,
     month: 8,
-    day: 25
+    day: 25,
+    order_price: 7.99
 )

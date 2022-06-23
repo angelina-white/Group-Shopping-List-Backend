@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_23_030402) do
+ActiveRecord::Schema.define(version: 2022_06_23_161123) do
 
   create_table "names", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2022_06_23_030402) do
     t.integer "year"
     t.integer "month"
     t.integer "day"
+    t.float "order_price"
   end
 
   create_table "skus", force: :cascade do |t|
