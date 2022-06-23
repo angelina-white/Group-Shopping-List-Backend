@@ -24,12 +24,16 @@ class ApplicationController < Sinatra::Base
     end
 
     post '/orders' do
-
       added_order = Order.create(
-        shop_date: Date.new(params[:shop_year], params[:shop_month], params[:shop_day]), 
+        # shop_date: Date.new(params[:shop_year], params[:shop_month], params[:shop_day]), 
+        # shop_date: params[:shop_date],
         sku_id: params[:sku_id], 
         quantity: params[:quantity], 
-        name_id: params[:name_id])
+        name_id: params[:name_id],
+        year: params[:year],
+        month: params[:month],
+        day: params[:day]
+      )
       added_order.to_json
     end
 

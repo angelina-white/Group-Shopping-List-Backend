@@ -56,13 +56,27 @@ puts "Seeding orders data..."
 
 Order.create(
     sku_id: spring_mix.id,
-    shop_date: Date.new(2022, 6, 25),
     quantity: 0.5,
-    name_id: billy.id
+    name_id: billy.id,
+    year: 2022,
+    month: 6,
+    day: 25
 )
 
 Order.create(
     sku_id: spring_mix.id,
-    shop_date: Date.new(2022, 7, 25),
     quantity: 1.5,
+    name_id: "",
+    year: 2022,
+    month: 7,
+    day: 25
+)
+
+Order.create(
+    sku_id: spring_mix.id,
+    quantity: 2.5,
+    name_id: "",
+    year: 2022,
+    month: 8,
+    day: 25
 )

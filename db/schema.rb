@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_22_153053) do
+ActiveRecord::Schema.define(version: 2022_06_23_030402) do
 
   create_table "names", force: :cascade do |t|
     t.string "name"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.date "shop_date"
     t.integer "sku_id"
     t.float "quantity"
     t.integer "name_id"
+    t.integer "year"
+    t.integer "month"
+    t.integer "day"
   end
 
   create_table "skus", force: :cascade do |t|
