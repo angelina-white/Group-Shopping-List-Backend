@@ -22,6 +22,14 @@ organic_milk = Sku.create(
     price: 10.89
 )
 
+whole_milk = Sku.create(
+    sku_number: 999,
+    label: "Whole Milk, 1 Gal.",
+    description: "",
+    unit_count: 1_000_000,
+    price: 3.89
+)
+
 spin_parm_dp = Sku.create(
     sku_number: 407600,
     label: "Spinach Parm Dip",
@@ -30,6 +38,13 @@ spin_parm_dp = Sku.create(
     price: 8.99
 )
 
+water_bottles = Sku.create(
+    sku_number: 55555,
+    label: "Purified Water, 40-pk",
+    description: "",
+    unit_count: 40,
+    price: 3.99
+)
 
 puts "Seeding names data..."
 
@@ -67,19 +82,30 @@ Order.create(
 Order.create(
     sku_id: spring_mix.id,
     quantity: 1.5,
-    name_id: "",
+    name_id: tom.id,
     year: 2022,
-    month: 7,
+    month: 6,
     day: 25,
     order_price: 2.99
 )
 
 Order.create(
     sku_id: spring_mix.id,
-    quantity: 2.5,
-    name_id: "",
+    quantity: 0.75,
+    name_id: sarah.id,
     year: 2022,
-    month: 8,
+    month: 6,
     day: 25,
     order_price: 7.99
+)
+
+
+Order.create(
+    sku_id: water_bottles.id,
+    quantity: 0.5,
+    name_id: billy.id,
+    year: 2022,
+    month: 6,
+    day: 25,
+    order_price: 2.00
 )
