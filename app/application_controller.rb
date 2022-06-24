@@ -29,10 +29,11 @@ class ApplicationController < Sinatra::Base
         # shop_date: params[:shop_date],
         sku_id: params[:sku_id], 
         quantity: params[:quantity], 
-        name_id: params[:name_id],
+        name_id: params[:name_id] || Name.first,
         year: params[:year],
         month: params[:month],
-        day: params[:day]
+        day: params[:day], 
+        order_price: params[:order_price] || 1.5
       )
       added_order.to_json
     end
