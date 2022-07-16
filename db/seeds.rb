@@ -10,7 +10,7 @@ spring_mix = Sku.create(
     sku_number: 48757,
     label: "Spring Mix Salad",
     description: "A flavorful blend of organic baby lettuces, baby greens, and radicchio.",
-    unit_count: 1_000_000,
+    unit_count: 1,
     price: 4.49
 )
 
@@ -26,7 +26,7 @@ spin_parm_dp = Sku.create(
     sku_number: 407600,
     label: "Spinach Parm Dip",
     description: "",
-    unit_count: 1_000_000,
+    unit_count: 1,
     price: 8.99
 )
 
@@ -66,7 +66,7 @@ flour = Sku.create(
     sku_number: 10610,
     label: "Gold Medal Flour",
     description: "",
-    unit_count: 1000000,
+    unit_count: 1,
     price: 4.99
 )
 
@@ -74,7 +74,7 @@ beans = Sku.create(
     sku_number: 252582,
     label: "Red Kidney Beans",
     description: "",
-    unit_count: 1000000,
+    unit_count: 1,
     price: 1.99
 )
 
@@ -90,7 +90,7 @@ breadCrumbs = Sku.create(
     sku_number: 89108,
     label: "Progresso",
     description: "",
-    unit_count: 1000000,
+    unit_count: 1,
     price: 2.25
 )
 
